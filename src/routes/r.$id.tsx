@@ -34,7 +34,7 @@ export const Route = createFileRoute("/r/$id")({
 });
 
 function RestaurantPage() {
-  const { restaurant } = Route.useLoaderData();
+  const { restaurant } = Route.useLoaderData() as { restaurant: Restaurant };
   const cart = useCart();
 
   return (
