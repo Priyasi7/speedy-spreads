@@ -37,6 +37,8 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Late-night ramen, omakase, smash burgers and slow-cooked dal — delivered with care." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Morsel — Editorial food, delivered" },
+      { name: "twitter:description", content: "Late-night ramen, omakase, smash burgers and slow-cooked dal — delivered with care." },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
