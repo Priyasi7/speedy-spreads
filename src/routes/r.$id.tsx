@@ -1,11 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Star, Clock, MapPin, Plus, Minus, Leaf, Sparkles } from "lucide-react";
-import { findRestaurant } from "@/data/restaurants";
+import { findRestaurant, type Restaurant } from "@/data/restaurants";
 import { useCart } from "@/lib/cart";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const Route = createFileRoute("/r/$id")({
-  loader: ({ params }) => {
+  loader: ({ params }): { restaurant: Restaurant } => {
     const restaurant = findRestaurant(params.id);
     if (!restaurant) throw notFound();
     return { restaurant };
